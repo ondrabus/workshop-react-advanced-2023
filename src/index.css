@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    font-family: 'Work Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    background: url('./bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
