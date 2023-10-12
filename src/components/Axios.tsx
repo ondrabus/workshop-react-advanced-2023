@@ -9,7 +9,7 @@ const Axios: React.FC = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = (await axios.get("/api/getFlights")).data as Responses.IListContentItemsResponse<FlightModel>
+            const data = // {add the axios call here} .data as Responses.IListContentItemsResponse<FlightModel>
             setFlights(data.items)
         }
         fetchData()

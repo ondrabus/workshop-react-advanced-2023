@@ -10,7 +10,9 @@ const AxiosRetry: React.FC = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            axiosRetry(axios, { retries: 10, retryDelay: axiosRetry.exponentialDelay });
+            
+            // add the axios retry call here
+
             const data = (await axios.get("/api/getFlightsUnreliable")).data as Responses.IListContentItemsResponse<FlightModel>
             if (data && data.items){
                 setFlights(data.items)

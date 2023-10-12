@@ -9,11 +9,7 @@ const ReactQuery: React.FC = () => {
         return data.items
     }
 
-    const { isLoading, isError, isRefetching, data } = useQuery({ queryKey: ["flights"], queryFn: flightsFetcher})
-
-    if (isLoading) return <tbody><tr><td colSpan={5}>Loading data...</td></tr></tbody>
-    if (isRefetching) return <tbody><tr><td colSpan={5}>Refetching data...</td></tr></tbody>
-    if (isError) return <tbody><tr><td colSpan={5}>Failed to load data.</td></tr></tbody>
+    // add the React Query code here
 
     return <tbody>
         {data?.map(f => <FlightLine flight={f} />)}

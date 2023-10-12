@@ -10,10 +10,8 @@ const SWR: React.FC = () => {
         return data.items
     }
 
-    const {data, error, isLoading} = useSWR("flights", flightsFetcher)
-
-    if (isLoading) return <tbody><tr><td colSpan={5}>Loading data...</td></tr></tbody>
-    if (error) return <tbody><tr><td colSpan={5}>Failed to load data.</td></tr></tbody>
+    // add the SWR call here
+    
 
     return <tbody>
         {data?.map(f => <FlightLine flight={f} />)}

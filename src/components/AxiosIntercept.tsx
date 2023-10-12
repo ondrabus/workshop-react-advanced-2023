@@ -10,12 +10,7 @@ const AxiosIntercept: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             
-            axios.interceptors.request.use(config => {
-                console.log(`Request was sent via Axios to ${config.url}.`);
-                return config;
-            }, error => {
-                return Promise.reject(error);
-            })
+            // add the interceptor call here
 
             const data = (await axios.get("/api/getFlights")).data as Responses.IListContentItemsResponse<FlightModel>
             setFlights(data.items)

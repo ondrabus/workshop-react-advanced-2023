@@ -8,7 +8,7 @@ const Fetch: React.FC = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await (await fetch("/api/getFlights")).json() as Responses.IListContentItemsResponse<FlightModel>
+            const data = // {add the FETCH API request here} as Responses.IListContentItemsResponse<FlightModel>
             setFlights(data.items)
         }
         fetchData()
