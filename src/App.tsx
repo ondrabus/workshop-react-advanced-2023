@@ -1,11 +1,4 @@
-import Axios from "./components/Axios";
-import AxiosRetry from "./components/AxiosRetry";
-import UseEffect from "./components/Fetch";
-import ReactQuery from "./components/ReactQuery";
-import ReactQueryPagination from "./components/ReactQueryPagination";
-import SWR from "./components/SWR";
-import SWRMutate from "./components/SWRMutate";
-import SWRRetry from "./components/SWRRetry";
+import Fetch from "./components/Fetch";
 
 const App: React.FC = () => {
   return (
@@ -23,8 +16,8 @@ const App: React.FC = () => {
                   <th>Scheduled departure</th>
                 </tr>
               </thead>
-              <ReactQueryPagination />
             </table>
+            <Fetch />
           </div>
         </div>
       </main>
