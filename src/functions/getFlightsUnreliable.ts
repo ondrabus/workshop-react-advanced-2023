@@ -8,6 +8,12 @@ const handler: Handler = async (event, context) => {
     if (Math.random() > 0.2){
         return {
             statusCode: 500,
+        headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "GET, POST, OPTION",
+      },
+            
         }
     }
 
